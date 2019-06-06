@@ -75,7 +75,7 @@ func Scores(FirstCard int, SecondCard int) int {
 //Deal appends the cards to the hand
 func Deal(deck []Card) ([]Card, []Card) {
 	var hand []Card
-	for i := 0; i < 2; i++ {
+	for i := 0; i < 1; i++ {
 		hand = append(hand, deck[i])
 		deck[i] = deck[len(deck)-1]
 		deck = deck[:len(deck)-1]
@@ -100,4 +100,16 @@ func Shuffle(deck []Card) {
 func OpenTheGame() {
 	fmt.Println("Welcome to Blackjack. I am your dealer,my name is D'Arby,D-A-R-B-Y.")
 
+}
+
+//Commands are the things the player can do
+func Commands(cmd string) {
+	for {
+		switch cmd {
+		case "rules":
+		case "Stay":
+		case "Hit":
+		}
+
+	}
 }
